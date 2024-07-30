@@ -1,0 +1,30 @@
+Understanding Asymptotic Notation
+Big O Notation:
+Big O notation describes the upper bound of the time complexity of an algorithm, providing a worst-case scenario to help understand the performance and scalability of the algorithm. It simplifies the complexity by focusing on the most significant factors, ignoring constant factors and lower-order terms.
+
+Best, Average, and Worst-case Scenarios:
+
+Best-case: The scenario where the algorithm performs the minimum number of operations. For example, in a search operation, the best-case occurs when the target element is the first element in the array.
+Average-case: The scenario that represents the expected number of operations the algorithm will perform, averaged over all possible inputs.
+Worst-case: The scenario where the algorithm performs the maximum number of operations. For example, in a search operation, the worst-case occurs when the target element is not present in the array or is the last element.
+
+Analysis
+Time Complexity:
+
+Linear Search: The time complexity is 
+𝑂(𝑛)
+O(n) because, in the worst-case scenario, it might need to iterate through all n elements.
+Binary Search: The time complexity is 𝑂(log 𝑛)
+O(logn) because it repeatedly divides the search interval in half.
+
+Suitability for the Platform:
+
+Linear Search: Suitable for small datasets where the overhead of sorting is not justified. Simple to implement but inefficient for large datasets.
+Binary Search: More suitable for large datasets due to its 
+𝑂(log 𝑛)
+O(logn) time complexity. However, it requires the array to be sorted, which introduces an additional 
+𝑂(𝑛 log 𝑛)
+O(nlogn) complexity for sorting.
+Given the typical large datasets in an e-commerce platform, binary search is more suitable despite the need for sorting. The performance gain in search operations outweighs the sorting overhead, especially when searches are frequent and the dataset remains relatively static.
+
+This setup and analysis provide a comprehensive approach to optimizing the search functionality of an e-commerce platform using appropriate data structures and algorithms.
